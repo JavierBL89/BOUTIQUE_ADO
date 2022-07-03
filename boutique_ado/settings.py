@@ -16,7 +16,6 @@ import dj_database_url
 
 if os.path.isfile("env.py"):
     import env
-
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -25,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY  = os.getenv('SECRET_KEY', '')
+SECRET_KEY = os.getenv('SECRET_KEY', '')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
@@ -91,7 +90,7 @@ TEMPLATES = [
                 'crispy_forms.templatetags.crispy_forms_field',
 
             ]
-          
+
         },
     },
 ]
@@ -124,7 +123,7 @@ WSGI_APPLICATION = 'boutique_ado.wsgi.application'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 if 'DATABASE_URL' in os.environ:
-    
+
     DATABASES = {
         'default': dj_database_url.parse(os.environ.get('DATABASE'))
     }

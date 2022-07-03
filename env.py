@@ -1,4 +1,5 @@
 import os
+
 os.environ.setdefault('SECRET_KEY', 'django-insecure-2n^c)*==(043!t*56igz_h&i()*1wf8w8+9gr5lxc_cla4yq1k')
 os.environ.setdefault('STRIPE_PUBLIC_KEY', 'pk_test_51LBOvCLzFhEXkarg7N0Q42yNteeE2b883G6fG7P5sJpRWPztcqxrogMts2NEZnQCPqCSG39dhvvF8LVQ5rbRS1x900jV78wniI')
 os.environ.setdefault('STRIPE_SECRET_KEY', 'sk_test_51LBOvCLzFhEXkarg80jikjQ3uryFFlbktfSEto94YhA73h0aXscs0mgx5GJiI3A2CLl5B1hDjtK3FDa9h9icx2sS00TkhiDtFk')
