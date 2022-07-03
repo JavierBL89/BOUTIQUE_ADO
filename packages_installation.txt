@@ -1,0 +1,16 @@
+python manage.py loaddata categories
+python manage.py loaddata products
+
+
+ from products.models import Product
+
+ kk = ['kitchen_dining','bed_bath']
+
+ clothes = Product.objects.exclude(category__name__in=kk)
+
+ for item in clothes:
+   item.has_sizes = True
+   item.save()
+   
+
+pip install -r requirements.txt
