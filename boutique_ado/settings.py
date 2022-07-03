@@ -126,7 +126,7 @@ WSGI_APPLICATION = 'boutique_ado.wsgi.application'
 if 'DATABASE_URL' in os.environ:
     
     DATABASES = {
-        'deafault': dj_database_url.parse(os.environ.get('DATABASE'))
+        'default': dj_database_url.parse(os.environ.get('DATABASE'))
     }
 else:
     DATABASES = {
