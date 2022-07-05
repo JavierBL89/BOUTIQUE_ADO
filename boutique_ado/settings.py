@@ -195,7 +195,6 @@ if 'USE_AWS' in os.environ:
     STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
     MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
 
-boutique-ado-staticfiles-user,,AKIAWQIOZWCVT7ZZVWG5,u23oHfj99WX465sOpQ5DtXSkheTk4bLFEbpAFx+e,https://447244513451.signin.aws.amazon.com/console	
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
