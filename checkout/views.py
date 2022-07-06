@@ -21,6 +21,7 @@ from bag.contexts import bag_contents
 import json
 import stripe
 
+
 ### 3.1. POINT 3.1 LESSON STRIPE 14 on notebook
 @require_POST
 def cache_checkout_data(request):
@@ -42,6 +43,7 @@ def cache_checkout_data(request):
                                  'processed right now. Please try '
                                  'again later.'))
         return HttpResponse(content=e, status=400)
+
 
 def checkout(request):
     #### 1. POINT 1 LESSON STRIPE 4 on notebook
@@ -67,7 +69,7 @@ def checkout(request):
         order_form = OrderForm(form_data)
         # 5. POINT 5 LESSON STRIPE 6 on the notebooke
         if order_form.is_valid():
-                                   ## ### 9. POINT 9 STRIPE LESSON 16 on notebook
+            ## ### 9. POINT 9 STRIPE LESSON 16 on notebook
             order = order_form.save(commit=False)
             ## ### 9. POINT 9 STRIPE LESSON 16 on notebook
             pid = request.POST.get('client_secret').split('_secret')[0]
@@ -106,7 +108,7 @@ def checkout(request):
                     )
                     order.delete()
                     return redirect(reverse('view_bag'))
-                    
+                 
             # 10. POINT 10 LESSON STRIPE 6 on the notebooke
             # Save the info to the user's profile if all is well
             request.session['save_info'] = 'save-info' in request.POST
@@ -172,6 +174,7 @@ def checkout(request):
     }
 
     return render(request, template, context)
+
 
 #### CREATE CHECKOUT_SUCCESS VIEW, LESSON STRIPE 6, on the notebook
 def checkout_success(request, order_number):
