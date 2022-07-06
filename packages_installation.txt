@@ -1,5 +1,11 @@
+python manage.py loaddata categories.json
+python manage.py loaddata products.json
+
+or
+
 python manage.py loaddata categories
 python manage.py loaddata products
+
 
 
  from products.models import Product
