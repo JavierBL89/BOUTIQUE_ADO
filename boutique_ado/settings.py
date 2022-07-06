@@ -127,7 +127,7 @@ WSGI_APPLICATION = 'boutique_ado.wsgi.application'
 DATABASES = {
     'default': dj_database_url.parse(os.environ.get('DATABASE'))
 }
-# else:
+# else: puta
 #     DATABASES = {
 #         'default': {
 #             'ENGINE': 'django.db.backends.sqlite3',
